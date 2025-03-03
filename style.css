@@ -1,0 +1,101 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+  }
+  
+  .container {
+    max-width: 600px;
+    padding: 20px;
+  }
+  
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    animation: fadeIn 2s ease-in-out;
+  }
+  
+  p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    animation: fadeIn 3s ease-in-out;
+  }
+  
+  .countdown {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 40px;
+    animation: fadeIn 4s ease-in-out;
+  }
+  
+  .countdown div {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    width: 100px;
+    text-align: center;
+  }
+  
+  .countdown div span {
+    display: block;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  .countdown div small {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+  }
+  
+  form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    animation: fadeIn 5s ease-in-out;
+  }
+  
+  input[type="email"] {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    width: 250px;
+    font-size: 1rem;
+  }
+  
+  button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background: #2575fc;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  button:hover {
+    background: #1b5fd9;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
