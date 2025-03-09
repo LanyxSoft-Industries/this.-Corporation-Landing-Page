@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+  <channel>
+    <title>this. Corporation</title>
+    <link>https://www.thiscorporation.org</link>
+    <description>[Brief description]</description>
+    <language>en-us</language>
+
+    <!-- Repeat this block for each new update or post -->
+    <item>
+      <title>Post Title</title>
+      <link>https://www.thiscorporation.wordpress.com/post-link</link>
+      <description>Brief description of the post</description>
+      <pubDate>Thu, 09 Mar 2025 12:00:00 CST</pubDate>
+    </item>
+    <!-- End of repeat block -->
+
+  </channel>
+</rss>
