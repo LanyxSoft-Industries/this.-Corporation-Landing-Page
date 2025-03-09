@@ -30,13 +30,6 @@ document.getElementById('subscribeForm').addEventListener('submit', function(eve
   document.getElementById('email').value = '';
 });
 
-
-function handleRouting() {
-  if (window.location.pathname === '/rss') {
-      window.location.replace('/rss.xml');
-  }
-}
-
 const handleRouting = () => {
   if (window.location.pathname === '/rss') {
     window.location.replace('/rss.xml');
