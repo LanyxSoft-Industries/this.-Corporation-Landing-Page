@@ -1,6 +1,6 @@
 // Countdown Timer
 const countdown = () => {
-    const countDate = new Date('February 28, 2025 00:00:00').getTime();
+    const countDate = new Date('April 28, 2025 00:00:00').getTime();
     const now = new Date().getTime();
     const gap = countDate - now;
   
@@ -28,5 +28,5 @@ const countdown = () => {
     const email = document.getElementById('email').value;
     alert(`Thank you! We'll notify you at ${email} when we launch.`);
     document.getElementById('email').value = '';
-  });
-  
+  }
+);
