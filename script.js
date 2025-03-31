@@ -23,15 +23,6 @@ const countdown = () => {
 // Update the clock
 setInterval(countdown, 1000);
 
-// Email Subscription Form
-document.getElementById('subscribeForm').addEventListener('submit', function (event) {
-  event.preventDefault();
-  const email = document.getElementById('email').value;
-  window.location.replace("mailto:someone@something.com");
-  // alert(`Thank you! We'll notify you at ${email} when we launch.`);
-  document.getElementById('email').value = '';
-});
-
 const handleRouting = () => {
   if (window.location.pathname === '/rss') {
     window.location.replace('/rss.xml');
@@ -39,7 +30,7 @@ const handleRouting = () => {
   else if (window.location.pathname === '/journals') {
     window.location.replace('/journals.html');
   }
-  else if (window.location.pathname === '/hoem') {
+  else if (window.location.pathname === '/home') {
     window.location.replace('/index.html');
   }
   else {
