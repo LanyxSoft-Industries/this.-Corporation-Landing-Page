@@ -36,12 +36,7 @@
 
     <script>
         // Fetch data from ifconfig.co
-        fetch('https://ifconfig.co/json', {
-            method: 'GET', // or 'POST', 'PUT', 'DELETE', etc.
-            headers: {
-                'Content-Type': 'text/json'
-            }
-        })
+        fetch('https://ifconfig.co/json')
             .then(response => {
                 console.log(response);
                 return response.json();
