@@ -32,24 +32,6 @@
 </head>
 <body>
     <h1>Your IP Information</h1>
-    <div class="output" id="output">Fetching data...</div>
-
-    <script>
-        // Fetch data from ifconfig.co
-        fetch('https://ifconfig.co/json', {
-            method: 'GET',
-            mode: 'no-cors'
-        })
-            .then(response => {
-                console.log(`Response: ${response} ${response[0]}`);
-                return response;
-            })
-            .catch(error => {
-                // Handle errors
-                console.error("Fetch error:", error);
-                const outputElement = document.getElementById('output');
-                outputElement.textContent = `Error fetching data: ${error.message}`;
-            });
-    </script>
+    <embed src="'https://ifconfig.co/json"> | <iframe src="https://ifconfig.co/json" width="800" height="600" frameborder="0" allowfullscreen></iframe>
 </body>
 </html>
