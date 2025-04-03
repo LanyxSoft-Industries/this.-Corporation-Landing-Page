@@ -44,21 +44,21 @@
         })
             .then(response => {
                 if (!response.ok) {
-                    console.log("er");
+                    console.log("er" + response);
                     throw new Error(`HTTP error! Status: ${response.status}`);
                 }
-                console.log("eh");
+                console.log("eh" + response);
                 return response.json();
             })
             .then(data => {
                 // Display the data
-                console.log("wooo");
+                console.log("wooo " + data);
                 const outputElement = document.getElementById('output');
                 outputElement.textContent = JSON.stringify(data, null, 2);
             })
             .catch(error => {
                 // Handle errors
-                console.log("err");
+                console.log("err " + error);
                 const outputElement = document.getElementById('output');
                 outputElement.textContent = `Error fetching data: ${error.message}`;
             });
