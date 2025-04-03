@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IP Info Landing Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f9;
+        }
+        h1 {
+            color: #333;
+        }
+        .output {
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background-color: #fff;
+            max-width: 400px;
+            word-wrap: break-word;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <h1>Your IP Information</h1>
+    <div class="output" id="output">Fetching data...</div>
+
+    <script>
+        // Fetch data from ifconfig.co
+        fetch('https://ifconfig.co/json')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(data => {
+                // Display the data
+                const outputElement = document.getElementById('output');
+                outputElement.textContent = JSON.stringify(data, null, 2);
+            })
+            .catch(error => {
+                // Handle errors
+                const outputElement = document.getElementById('output');
+                outputElement.textContent = `Error fetching data: ${error.message}`;
+            });
+    </script>
+</body>
+</html>
