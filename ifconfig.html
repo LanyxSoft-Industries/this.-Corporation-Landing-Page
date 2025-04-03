@@ -36,7 +36,10 @@
 
     <script>
         // Fetch data from ifconfig.co
-        fetch('https://ifconfig.co/json')
+        fetch('https://ifconfig.co/json', {
+            method: 'GET',
+            mode: 'no-cors'
+        })
             .then(response => {
                 console.log(`event ${response}`);
                 return response;
