@@ -41,7 +41,7 @@
             mode: 'no-cors'
         })
             .then(response => {
-                console.log(`event ${response}`);
+                console.log(`Response: ${response} ${response.json()}`);
                 return response;
             })
             .catch(error => {
