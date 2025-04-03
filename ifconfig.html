@@ -49,7 +49,7 @@
             })
             .catch(error => {
                 // Handle errors
-                console.log("err " + error);
+                console.error("Fetch error:", error);
                 const outputElement = document.getElementById('output');
                 outputElement.textContent = `Error fetching data: ${error.message}`;
             });
