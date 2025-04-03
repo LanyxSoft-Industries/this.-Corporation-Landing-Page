@@ -43,11 +43,7 @@
             }
         })
             .then(response => {
-                if (!response.ok) {
-                    console.log("er" + response);
-                    throw new Error(`HTTP error! Status: ${response.status}`);
-                }
-                console.log("eh" + response);
+                console.log(response);
                 return response.json();
             })
             .then(data => {
